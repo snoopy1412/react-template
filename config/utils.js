@@ -29,7 +29,10 @@ exports.cssLoaders = (options) => {
     options: {
     ident: 'postcss',
         plugins: () => [
+          require('postcss-icss-selectors'), // css module
           require('postcss-flexbugs-fixes'),
+          // https://github.com/SuperOl3g/postcss-image-set-polyfill
+          require('postcss-image-set-polyfill'),
           autoprefixer({
             browsers: [
               '>1%',
